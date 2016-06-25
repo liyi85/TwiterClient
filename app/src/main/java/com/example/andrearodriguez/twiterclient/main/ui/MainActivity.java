@@ -14,7 +14,7 @@ import android.view.MenuItem;
 
 import com.example.andrearodriguez.twiterclient.LoginActivity;
 import com.example.andrearodriguez.twiterclient.R;
-import com.example.andrearodriguez.twiterclient.images.HashtagsFragment;
+import com.example.andrearodriguez.twiterclient.hashtags.HashtagsFragment;
 import com.example.andrearodriguez.twiterclient.images.ImageFragment;
 import com.example.andrearodriguez.twiterclient.main.adapter.MainSectionsPagerAdapter;
 import com.twitter.sdk.android.Twitter;
