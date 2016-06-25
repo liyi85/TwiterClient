@@ -1,4 +1,4 @@
-package com.example.andrearodriguez.twiterclient.images;
+package com.example.andrearodriguez.twiterclient.images.ui;
 
 
 import android.os.Bundle;
