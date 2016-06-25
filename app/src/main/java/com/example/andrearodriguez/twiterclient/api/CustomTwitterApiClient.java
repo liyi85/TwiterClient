@@ -22,6 +22,7 @@ public class CustomTwitterApiClient extends TwitterApiClient{
      * @throws IllegalArgumentException if TwitterSession argument is null
      */
     public CustomTwitterApiClient(Session session) {
+
         super(session);
     }
     public TimeLineServices getTimelineService(){

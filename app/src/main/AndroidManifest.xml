@@ -2,12 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.andrearodriguez.twiterclient">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".TwitterClientApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".TwitterClientApp"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".LoginActivity">
             <intent-filter>
@@ -16,10 +18,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="08e3c7143d3045a871bdeae8f2440882805cf4f4"
-            />
+            android:host="connect"
+            android:scheme="twitterapp"/>
+
+        <activity android:name=".main.MainActivity"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

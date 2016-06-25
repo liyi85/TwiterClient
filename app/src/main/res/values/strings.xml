@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TwiterClient</string>
+    <string name="login.error.messagge">Imposible iniciar sesión %s</string>
+    <string name="main.header.images">Imágenes</string>
+    <string name="main.header.hastags">Hastags</string>
+    <string name="main.menu.action.logout">Cerrar Sesión</string>
 </resources>

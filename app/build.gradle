@@ -50,6 +50,10 @@ dependencies {
     compile('com.twitter.sdk.android:twitter:1.13.3@aar') {
         transitive = true;
     }
+    //CrashLitics
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.7@aar') {
+        transitive = true;
+    }
 
     compile 'com.android.support:appcompat-v7:23.4.0'
 
@@ -62,7 +66,7 @@ dependencies {
 
     apt "com.google.dagger:dagger-compiler:$rootProject.ext.daggerVersion"
     compile "javax.annotation:jsr250-api:$rootProject.ext.jsr250Version"
-    apt "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
+    compile "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
 
     apt "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
     compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
