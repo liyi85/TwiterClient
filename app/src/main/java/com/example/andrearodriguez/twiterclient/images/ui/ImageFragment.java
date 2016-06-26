@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +15,16 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.example.andrearodriguez.twiterclient.R;
+import com.example.andrearodriguez.twiterclient.TwitterClientApp;
 import com.example.andrearodriguez.twiterclient.entities.Image;
 import com.example.andrearodriguez.twiterclient.images.ImagePresenter;
+import com.example.andrearodriguez.twiterclient.images.di.ImagesComponent;
 import com.example.andrearodriguez.twiterclient.images.ui.adapters.ImagesAdapter;
 import com.example.andrearodriguez.twiterclient.images.ui.adapters.OnItemClickListener;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,7 +41,9 @@ public class ImageFragment extends Fragment implements ImagesView, OnItemClickLi
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
+    @Inject
     ImagesAdapter adapter;
+    @Inject
     ImagePresenter presenter;
 
 
@@ -51,7 +58,21 @@ public class ImageFragment extends Fragment implements ImagesView, OnItemClickLi
         View view = inflater.inflate(R.layout.fragment_content, container, false);
 
         ButterKnife.bind(this, view);
+        setupInjection();
+        setupRecyclerView();
+        presenter.getImagesTweets();
         return view;
+    }
+
+    private void setupRecyclerView() {
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void setupInjection() {
+        TwitterClientApp app = (TwitterClientApp)getActivity().getApplication();
+        ImagesComponent imagesComponents = app.getImagesComponent(this, this, this);
+        imagesComponents.inject(this);
     }
 
     @Override

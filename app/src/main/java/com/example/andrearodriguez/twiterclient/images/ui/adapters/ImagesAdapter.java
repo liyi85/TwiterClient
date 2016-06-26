@@ -48,7 +48,7 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
     }
 
     public void setItems(List<Image> newItem){
-        newItem.addAll(newItem);
+        dataset.addAll(newItem);
         notifyDataSetChanged();
     }
 
