@@ -14,23 +14,23 @@ import android.view.MenuItem;
 
 import com.example.andrearodriguez.twiterclient.LoginActivity;
 import com.example.andrearodriguez.twiterclient.R;
-import com.example.andrearodriguez.twiterclient.hashtags.HashtagsFragment;
+import com.example.andrearodriguez.twiterclient.hashtag.ui.HashtagFragment;
 import com.example.andrearodriguez.twiterclient.images.ui.ImageFragment;
 import com.example.andrearodriguez.twiterclient.main.adapter.MainSectionsPagerAdapter;
 import com.twitter.sdk.android.Twitter;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
+    @Bind(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.appbar)
+    @Bind(R.id.appbar)
     AppBarLayout appbar;
-    @BindView(R.id.container)
+    @Bind(R.id.container)
     ViewPager viewPager;
-    @BindView(R.id.tabs)
+    @Bind(R.id.tabs)
     TabLayout tabs;
 
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupAdapter() {
-        Fragment[] fragments = new Fragment[]{new ImageFragment(), new HashtagsFragment()};
+        Fragment[] fragments = new Fragment[]{new ImageFragment(), new HashtagFragment()};
         String[] titles = new String[]{getString(R.string.main_header_images), getString(R.string.main_header_hastags)};
         MainSectionsPagerAdapter adapter = new MainSectionsPagerAdapter(getSupportFragmentManager(), titles, fragments);
 

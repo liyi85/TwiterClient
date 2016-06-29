@@ -14,14 +14,14 @@ import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
 
-    @BindView(R.id.twitterLoginButton)
+    @Bind(R.id.twitterLoginButton)
     TwitterLoginButton twitterLoginButton;
-    @BindView(R.id.container)
+    @Bind(R.id.container)
     RelativeLayout container;
 
     @Override

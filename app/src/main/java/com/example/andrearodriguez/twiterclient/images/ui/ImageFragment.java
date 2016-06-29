@@ -26,7 +26,8 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.BindView;
+
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -34,11 +35,11 @@ import butterknife.ButterKnife;
  */
 public class ImageFragment extends Fragment implements ImagesView, OnItemClickListener {
 
-    @BindView(R.id.container)
+    @Bind(R.id.container)
     FrameLayout container;
-    @BindView(R.id.progressbar)
+    @Bind(R.id.progressbar)
     ProgressBar progressbar;
-    @BindView(R.id.recyclerView)
+    @Bind(R.id.recyclerView)
     RecyclerView recyclerView;
 
     @Inject

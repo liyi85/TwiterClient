@@ -13,7 +13,7 @@ import com.example.andrearodriguez.twiterclient.lib.base.ImageLoader;
 
 import java.util.List;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -59,9 +59,9 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.imgMedia)
+        @Bind(R.id.imgMedia)
         ImageView imgMedia;
-        @BindView(R.id.txtTweet)
+        @Bind(R.id.txtTweet)
         TextView txtTweet;
 
         private View view;
