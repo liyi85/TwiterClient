@@ -10,7 +10,7 @@ public class Hashtag {
     private String tweetText;
     private int favoriteCount;
     private List<String> hashtag;
-    private final static String BASE_TWEET_URL = "https://twitter.com/null/status";
+    private final static String BASE_TWEET_URL = "https://twitter.com/null/status/";
 
     public String getId() {
         return id;

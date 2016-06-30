@@ -8,7 +8,7 @@ public class Image {
     private String imageURL;
     private String tweetText;
     private int favoriteCount;
-    private final static String BASE_TWEET_URL = "https://twitter.com/null/status";
+    private final static String BASE_TWEET_URL = "https://twitter.com/null/status/";
 
     public String getId() {
         return id;

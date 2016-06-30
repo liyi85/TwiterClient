@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -139,6 +140,7 @@ public class HashtagFragment extends Fragment implements HashtagView, OnItemClic
     //    ===============================onClick===========================================
     @Override
     public void onItemClick(Hashtag hashtag) {
+        Log.i("url", hashtag.getTwitterURL());
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(hashtag.getTwitterURL()));
         startActivity(intent);
     }

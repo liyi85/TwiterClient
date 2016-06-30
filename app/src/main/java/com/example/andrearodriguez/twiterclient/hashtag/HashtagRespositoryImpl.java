@@ -24,7 +24,7 @@ public class HashtagRespositoryImpl implements HashtagRespository{
 
     private EventBus eventBus;
     private CustomTwitterApiClient client;
-    private final static int TWEET_COUNT = 100;
+    private final static int TWEET_COUNT = 10;
 
     public HashtagRespositoryImpl(EventBus eventBus, CustomTwitterApiClient client) {
         this.eventBus = eventBus;
